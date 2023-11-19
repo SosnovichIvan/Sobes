@@ -1,27 +1,45 @@
-# React + TypeScript + Vite
+** Сервис Собеседований и контроля вакансий
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+*** Модуль - выкансии
 
-Currently, two official plugins are available:
+- возможность создавать вакансии
+- добовлять кандитатов в вакансии
+- открывать и закрывать вакансии
+- просмотр хода отбора
+- просмотр кого наняли
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+*** Модуль - собеседования
 
-## Expanding the ESLint configuration
+- возможность запланировать встречу
+- вести протокол
+- сохранения протокола и фидбека после встречи
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+*** Модуль - резюме
 
-- Configure the top-level `parserOptions` property like this:
+- внесение резюме
+- корректировака
+- просмотр ранее пройденых собеседований
+- просмотр фидбеков по кандитату
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+*** Модуль - встречи
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- каледарь будущих встреч
+- создания встречи с кандидатов с указанием вакансии и ревьюеров
+- перенос встречи
+- отмена встречи
+
+*** Модуль - авторизации
+
+- авторизация пользователя через модуль телеграмм
+- регестрация пользователя через модуль телеграмм
+- изменения пароля пользователя  модуль через телегамм
+
+*** Модуль - телеграмм
+
+- авторизация пользователя
+- регестрация пользователя
+- изменения пароля пользователя
+- отправка уведомлений пользователю
+- отправка платежки пользователю
+
+
