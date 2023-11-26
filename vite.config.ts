@@ -18,9 +18,9 @@ export default defineConfig({
       },
       remotes: {
         sobesedovanie: "http://localhost:3002/assets/remoteEntry.js",
-        // auth: "http://localhost:3003/assets/remoteEntry.js",
-        // rezume: "http://localhost:3004/assets/remoteEntry.js",
-        // settings: "http://localhost:3005/assets/remoteEntry.js",
+        auth: "http://localhost:3003/assets/remoteEntry.js",
+        rezume: "http://localhost:3004/assets/remoteEntry.js",
+        settings: "http://localhost:3005/assets/remoteEntry.js",
       },
       shared: ["react", "react-dom", "react-router-dom", "zustand"],
     }),
