@@ -43,6 +43,7 @@ module.exports = {
 		"@typescript-eslint/no-var-requires": 0,
 		"no-use-before-define": 0,
 		"import/no-unresolved": 'off',
+		"no-useless-catch": "off",
 		"@typescript-eslint/no-use-before-define": 0,
 		"import/extensions": ["error", "never", { svg: "always" }],
 		"react/no-unescaped-entities": 0,

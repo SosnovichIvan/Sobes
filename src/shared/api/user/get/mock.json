@@ -1,0 +1,7 @@
+{
+	"isAuth": true,
+	"settings": {
+		"modules": ["resume", "sobesedovanie", "settings"]
+	},
+	"firstRedirectPath": "/rezume"
+}

@@ -1,14 +1,12 @@
-import { lazy, Suspense } from "react";
-
-const SobesModule = lazy(() => import("sobesedovanie/App"));
+import { ConfigProvider } from "antd";
+import AppRoutes from "providers/routes";
 
 export const App = () => {
   return (
     <div>
-      App
-      <Suspense>
-        <SobesModule />
-      </Suspense>
+      <ConfigProvider>
+        <AppRoutes />
+      </ConfigProvider>
     </div>
   );
 };
