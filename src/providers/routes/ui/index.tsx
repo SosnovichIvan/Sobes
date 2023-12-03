@@ -1,6 +1,6 @@
 import { Suspense, useMemo } from "react";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import AppLayout from "./layout";
 
@@ -14,15 +14,13 @@ const AppRoutes = (props: AppRoutesProps) => {
 
   return (
     <Suspense>
-      <BrowserRouter>
-        <AppLayout>
-          <Routes>
-            {routes.map(({ path, Element }) => (
-              <Route path={path} element={Element} />
-            ))}
-          </Routes>
-        </AppLayout>
-      </BrowserRouter>
+      <AppLayout>
+        <Routes>
+          {routes.map(({ path, Element }) => (
+            <Route key={path} path={path} element={Element} />
+          ))}
+        </Routes>
+      </AppLayout>
     </Suspense>
   );
 };

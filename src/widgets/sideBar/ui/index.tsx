@@ -3,11 +3,14 @@ import { useMemo } from "react";
 import { Flex, Layout, Menu } from "antd";
 import { useLocation, useNavigate } from "react-router-dom";
 
-import { items } from "../config/menuItems";
+import { getMenuItems } from "../lib/getMenuItems";
 import { getSelectedKey } from "../lib/getSelectedKey";
+import { getIsAuthSelector } from "../model/selector/getIsAuthSelector";
 
 export const SideBar = () => {
   const { Sider } = Layout;
+
+  const isAuth = getIsAuthSelector();
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -16,6 +19,8 @@ export const SideBar = () => {
     () => getSelectedKey(location.pathname),
     [location],
   );
+
+  const items = useMemo(() => getMenuItems(isAuth), [isAuth]);
 
   const handleClick = ({ key }: { key: string }) => {
     navigate(key);

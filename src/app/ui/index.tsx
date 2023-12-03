@@ -1,12 +1,15 @@
 import { ConfigProvider } from "antd";
 import AppRoutes from "providers/routes";
+import { BrowserRouter } from "react-router-dom";
 
 export const App = () => {
   return (
     <div>
-      <ConfigProvider>
-        <AppRoutes />
-      </ConfigProvider>
+      <BrowserRouter>
+        <ConfigProvider>
+          <AppRoutes />
+        </ConfigProvider>
+      </BrowserRouter>
     </div>
   );
 };

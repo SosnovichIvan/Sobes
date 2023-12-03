@@ -1,6 +1,8 @@
-import { Layout, Flex } from "antd";
+import { Layout } from "antd";
 import { useGetAppSettings } from "providers/hooks/useGetAppSettings";
 
+import { Footer } from "widgets/footer";
+import { Header } from "widgets/header";
 import { SideBar } from "widgets/sideBar";
 
 import { Loader } from "shared/ui/loader";
@@ -14,30 +16,20 @@ const AppLayout = (props: AppLayoutProps) => {
 
   const { children } = props;
 
-  const { Header, Footer, Content } = Layout;
+  const { Content } = Layout;
 
   return (
     <Styled.AppLayoutWrapper>
       <Loader size="large" {...{ isLoading }}>
         <Layout style={{ width: "100%", height: "100%" }}>
-          <Header style={{ color: "#fff" }}>
-            <Flex>header</Flex>
-          </Header>
+          <Header />
           <Layout>
             <SideBar />
             <Layout>
               <Content style={{ padding: "12px 12px" }}>
                 children : {children}
               </Content>
-              <Footer style={{ padding: "6px 6px", height: "84px" }}>
-                <Flex
-                  align="center"
-                  justify="flex-start"
-                  style={{ height: "100%" }}
-                >
-                  footer
-                </Flex>
-              </Footer>
+              <Footer />
             </Layout>
           </Layout>
         </Layout>
